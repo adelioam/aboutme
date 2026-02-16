@@ -3,7 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Me</title>
+
+<title>Adelio Milanisti | Developer</title>
+
+<meta name="description" content="Adelio Milanisti - Developer, OS Enthusiast, Content Creator. Pembuat Minhy OS dan eksperimen software.">
+<meta name="keywords" content="Adelio Milanisti, Developer Indonesia, Minhy OS, Godot Developer">
+<meta name="author" content="Adelio Milanisti">
 
 <style>
 * {
@@ -14,39 +19,35 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #f5f5f5;
-    color: #222;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc, #e0f2fe);
+    background-attachment: fixed;
+    color: #1f2937;
 }
 
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-}
-
-/* NAVIGATION */
+/* NAVBAR */
 nav {
     position: fixed;
-    top: 0;
     width: 100%;
-    background: rgba(255,255,255,0.8);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid #eee;
+    top: 0;
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.7);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
     z-index: 1000;
 }
 
-nav .nav-container {
-    max-width: 900px;
+.nav-container {
+    max-width: 1000px;
     margin: auto;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
-    padding: 15px 20px;
+    align-items: center;
 }
 
 nav a {
     text-decoration: none;
-    color: #222;
+    color: #111827;
     margin-left: 20px;
     font-size: 14px;
     position: relative;
@@ -57,7 +58,7 @@ nav a::after {
     position: absolute;
     width: 0;
     height: 1px;
-    background: #222;
+    background: #111827;
     left: 0;
     bottom: -4px;
     transition: 0.3s;
@@ -67,9 +68,16 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* SECTIONS */
+/* CONTAINER */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 120px 20px 60px;
+}
+
+/* SECTION */
 section {
-    padding: 120px 0 60px 0;
+    margin-bottom: 80px;
     opacity: 0;
     transform: translateY(40px);
     animation: fadeUp 1s ease forwards;
@@ -78,7 +86,6 @@ section {
 section:nth-child(2) { animation-delay: 0.2s; }
 section:nth-child(3) { animation-delay: 0.4s; }
 section:nth-child(4) { animation-delay: 0.6s; }
-section:nth-child(5) { animation-delay: 0.8s; }
 
 @keyframes fadeUp {
     to {
@@ -88,55 +95,54 @@ section:nth-child(5) { animation-delay: 0.8s; }
 }
 
 h1 {
-    font-size: 42px;
+    font-size: 46px;
     margin-bottom: 10px;
 }
 
 h2 {
     font-size: 22px;
     margin-bottom: 20px;
-    border-left: 4px solid #222;
+    border-left: 4px solid #6366f1;
     padding-left: 10px;
 }
 
 p {
     margin-bottom: 15px;
-    color: #444;
+    color: #374151;
 }
 
 /* CARD */
 .card {
-    background: #fff;
+    background: rgba(255,255,255,0.8);
     padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #eee;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.05);
     margin-bottom: 20px;
     transition: 0.3s ease;
+    backdrop-filter: blur(10px);
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
 }
 
 footer {
     text-align: center;
     padding: 40px 0;
-    color: #777;
     font-size: 14px;
+    color: #6b7280;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
 <nav>
     <div class="nav-container">
-        <strong>Nama Kamu</strong>
+        <strong>adelio.a_</strong>
         <div>
             <a href="#about">Tentang</a>
-            <a href="#talent">Bakat</a>
             <a href="#projects">Proyek</a>
             <a href="#contact">Kontak</a>
         </div>
@@ -145,66 +151,37 @@ footer {
 
 <div class="container">
 
-<!-- HERO / ABOUT -->
 <section id="about">
-    <h1>Nama Kamu</h1>
-    <p>Developer Apps • Developer OS • Content Creator</p>
+    <h1>Adelio Milanisti</h1>
+    <p>Siswa SMA • Developer • OS Enthusiast</p>
     <br>
     <h2>Tentang Saya</h2>
     <p>
-        <!-- Ganti dengan deskripsi kamu -->
-        Tulis cerita singkat tentang perjalanan kamu sebagai developer dan creator.
+        Saya memiliki minat besar pada pengembangan aplikasi dan sistem operasi.
+        Saat ini saya sedang mengembangkan <strong>Minhy OS</strong> berbasis Linux
+        serta membangun berbagai eksperimen software dan game voxel menggunakan Godot.
     </p>
 </section>
 
-<!-- TALENT SECTION -->
-<section id="talent">
-    <h2>Bakat & Aktivitas</h2>
-
-    <div class="card">
-        <strong>🎬 YouTube Channel</strong>
-        <p>
-            Saya memiliki channel YouTube sendiri yang membahas teknologi, development,
-            dan eksperimen sistem operasi.
-        </p>
-        <p>Link: youtube.com/namachannel</p>
-    </div>
-
-    <div class="card">
-        <strong>📱 App Developer</strong>
-        <p>
-            Mengembangkan aplikasi mobile / desktop dengan fokus pada performa,
-            UI minimalis, dan pengalaman pengguna yang modern.
-        </p>
-    </div>
-
-    <div class="card">
-        <strong>💻 OS Developer</strong>
-        <p>
-            Mengembangkan dan memodifikasi sistem operasi,
-            eksperimen kernel, dan eksplorasi sistem tingkat rendah.
-        </p>
-    </div>
-
-</section>
-
-<!-- PROJECTS -->
 <section id="projects">
     <h2>Proyek</h2>
 
     <div class="card">
-        <strong>Nama Proyek 1</strong>
-        <p>Deskripsi singkat proyek.</p>
+        <strong>Minhy OS</strong>
+        <p>Sistem operasi berbasis Linux yang fokus pada performa ringan dan kustomisasi modern.</p>
     </div>
 
     <div class="card">
-        <strong>Nama Proyek 2</strong>
-        <p>Deskripsi singkat proyek.</p>
+        <strong>Voxel Game (Godot 4)</strong>
+        <p>Game sandbox voxel dengan terrain generator custom menggunakan Zylann Voxel Tools.</p>
     </div>
 
+    <div class="card">
+        <strong>Wall Display App</strong>
+        <p>Aplikasi layar informasi yang menampilkan suhu sensor, cuaca, jam, dan embed YouTube.</p>
+    </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact">
     <h2>Kontak</h2>
     <p>Email: emailkamu@email.com</p>
@@ -213,7 +190,7 @@ footer {
 </section>
 
 <footer>
-    © 2026 Nama Kamu — Minimalist Portfolio
+    © 2026 Adelio Milanisti — Minimal Elegant Portfolio
 </footer>
 
 </div>
