@@ -1,256 +1,143 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - Adelio Altisa</title>
-    <meta name="description" content="Adelio Altisa - Developer, OS Enthusiast, Content Creator.">
-    <meta name="author" content="Adelio Altisa">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>about me</title>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
-            background: #f5f5f7;
-            color: #1d1d1f;
-            line-height: 1.5;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            padding: 16px 0;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav strong {
-            font-weight: 600;
-            font-size: 18px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #1d1d1f;
-            margin-left: 24px;
-            font-size: 14px;
-            font-weight: 400;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: #0071e3;
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 120px 20px 80px;
-        }
-
-        /* Sections */
-        section {
-            margin-bottom: 80px;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(20px);
-            border-radius: 16px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        h1 {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            color: #1d1d1f;
-        }
-
-        h2 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 24px;
-            color: #1d1d1f;
-        }
-
-        h3 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 16px;
-            color: #1d1d1f;
-        }
-
-        p {
-            margin-bottom: 16px;
-            font-size: 16px;
-            color: #515154;
-        }
-
-        /* Categories */
-        .category {
-            margin-top: 32px;
-            padding: 32px;
-            background: #f5f5f7;
-            border-radius: 12px;
-            border: 1px solid #e5e5e7;
-        }
-
-        .spotlight {
-            margin-top: 24px;
-            padding: 24px;
-            background: #ffffff;
-            border-radius: 12px;
-            border: 1px solid #e5e5e7;
-            display: flex;
-            gap: 20px;
-            align-items: flex-start;
-            transition: box-shadow 0.3s ease;
-        }
-
-        .spotlight:hover {
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Icon Box */
-        .icon-box {
-            width: 60px;
-            height: 60px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, #0071e3, #40a9ff);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 16px;
-            flex-shrink: 0;
-        }
-
-        /* Table for OS features */
-        table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 16px;
-        }
-
-        td {
-            padding: 20px;
-            background: #ffffff;
-            border: 1px solid #e5e5e7;
-            border-radius: 12px;
-            vertical-align: top;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            font-size: 14px;
-            color: #86868b;
-            background: #f5f5f7;
-        }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                gap: 16px;
-            }
-
-            nav a {
-                margin-left: 0;
-                margin-right: 16px;
-            }
-
-            .container {
-                padding: 100px 16px 40px;
-            }
-
-            section {
-                padding: 24px;
-            }
-
-            h1 {
-                font-size: 36px;
-            }
-
-            h2 {
-                font-size: 20px;
-            }
-
-            .spotlight {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            table {
-                border-spacing: 8px;
-            }
-
-            td {
-                width: 100%;
-                display: block;
-                margin-bottom: 16px;
-            }
-        }
-    </style>
+<meta name="description" content="Adelio Altisa - Developer, OS Enthusiast, Content Creator.">
+<meta name="author" content="Adelio Altisa">
 </head>
+
 <body>
+
+<header>
+    <h2>adelio.a_</h2>
     <nav>
-        <div class="nav-container">
-            <strong>adelio.a_</strong>
-            <div>
-                <a href="#about">Tentang</a>
-                <a href="#projects">Karya</a>
-                <a href="#contact">Kontak</a>
-            </div>
-        </div>
+        <a href="#about">Tentang</a> |
+        <a href="#projects">Karya</a> |
+        <a href="#contact">Kontak</a>
     </nav>
+    <hr>
+</header>
 
-    <div class="container">
-        <section id="about">
-            <h1>M. Adelio Altisa M.</h1>
-            <p>Siswa SMA • Developer • OS Enthusiast</p>
-            <h2>Tentang Saya</h2>
-            <p>Singkat saja, nama lengkap saya tertera di atas dan saya biasa dipanggil Adelio di lingkungan saya, ya itu panggilan formal universal (klo panggilan khusus sebaiknya jgn dicari tau, aneh-aneh semua jir??)</p>
-            <p>Saat ini saya sedang menempuh pendidikan di salah satu SMA yang ada di Kota Kudus, yakni SMA Negeri 1 Kudus sebagai siswa kelas 10.</p>
-            <p>Untuk bakat dan minat lebih mengarah kepada bidang IT (Information Technology) and yeah, halaman yang anda lihat saat ini adalah hasil kegabutan saya saat libur ramadhan. btw info ps let</p>
-        </section>
+<main>
 
-        <section id="projects">
-            <h2>Penerapan</h2>
+<section id="about">
+    <h1>M. Adelio Altisa M.</h1>
+    <p>Siswa SMA • Developer • OS Enthusiast</p>
 
-            <div class="category">
-                <h3>App Developer</h3>
-                <p>Saya memiliki hobi coding dan membuat program sendiri, untuk aplikasi yang saya buat di bawah sini umumnya dibuat menggunakan Godot Engine 4.</p>
-                <div class="spotlight">
-                    <div class="icon-box">MC</div>
-                    <div>
-                        <strong>MiniCode Studio</strong>
-                        <p>Aplikasi yang dapat memungkinkan penggunanya untuk melakukan pengetikan atau coding semacam VSCode Studio tapi dengan size yang lebih ringan dan memiliki 2 mode utama, yakni Code Editor untuk aktivitas pengetikan kode kompleks seperti coding dan programming serta Text Editor untuk mengetik biasa seperti membuat catatan.</p>
-                        <p>Aplikasi ini mendukung semua format file yang berbentuk teks (yap, literally semua jenis file yang mengandung teks!) seperti .txt .py dll.</p>
-                    </div>
-                </div>
-            </div>
+    <h2>Tentang Saya</h2>
+    <p>
+        Nama lengkap saya tertera di atas dan biasa dipanggil Adelio.
+        Saat ini saya bersekolah di SMA Negeri 1 Kudus sebagai siswa kelas 10.
+    </p>
+    <p>
+        Minat saya berfokus pada bidang IT dan pengembangan sistem.
+        Halaman ini adalah hasil eksplorasi dan eksperimen pribadi.
+    </p>
+</section>
+
+<hr>
+
+<section id="projects">
+    <h2>Penerapan</h2>
+
+    <h3>App Developer</h3>
+    <p>
+        Saya membuat berbagai aplikasi menggunakan Godot Engine 4.
+    </p>
+
+    <h4>MiniCode Studio</h4>
+    <p>
+        Aplikasi editor ringan dengan dua mode utama:
+        Code Editor dan Text Editor.
+        Mendukung berbagai format file teks.
+    </p>
+
+    <hr>
+
+    <h3>Operating System That I Make</h3>
+    <p>
+        Saya mengembangkan sistem operasi bernama Minhy OS
+        berbasis Debian Linux dengan konsep Hybrid.
+    </p>
+
+    <h4>Minhy OS</h4>
+    <p>
+        Fokus pada performa ringan, dukungan hybrid,
+        serta kemudahan kustomisasi.
+    </p>
+
+    <h4>What Makes It Special?</h4>
+
+    <table border="1" width="100%" cellpadding="10">
+        <tr>
+            <td width="50%" valign="top">
+                <strong>Hybrid Operating System</strong>
+                <p>
+                    Mendukung aplikasi Windows (.exe, .msi)
+                    serta aplikasi Linux (.deb dan lainnya).
+                </p>
+            </td>
+
+            <td width="50%" valign="top">
+                <strong>Additional Features</strong>
+                <p>
+                    Hybrid Power Plan, Controlled CPU,
+                    dan Dynamic Memory Allocator.
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <td width="50%" valign="top">
+                <strong>Mini UI</strong>
+                <p>
+                    Desktop environment berbasis XFCE 4
+                    dengan tampilan modern dan ringan.
+                </p>
+            </td>
+
+            <td width="50%" valign="top">
+                <strong>Additional Settings</strong>
+                <p>
+                    Pengaturan tambahan
+                    untuk efektivitas penggunaan.
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+
+    <h3>YouTube Channel</h3>
+    <p>
+        Konten seputar eksperimen OS,
+        development, dan eksplorasi teknologi.
+    </p>
+
+</section>
+
+<hr>
+
+<section id="contact">
+    <h2>Kontak</h2>
+    <p>Email: emailkamu@email.com</p>
+    <p>GitHub: github.com/username</p>
+    <p>YouTube: youtube.com/namachannel</p>
+</section>
+
+</main>
+
+<hr>
+
+<footer>
+    <p>© 2026 Adelio Milanisti — Clean Blue Portfolio</p>
+</footer>
+
+</body>
+</html>            </div>
 
             <div class="category">
                 <h3>Operating System That I Make</h3>
