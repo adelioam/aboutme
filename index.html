@@ -5,287 +5,124 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>about me</title>
 
-<meta name="description" content="Adelio Altisa - Developer, OS Enthusiast, Content Creator.">
-<meta name="author" content="Adelio Altisa">
-
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+@keyframes fadeUp {
+  from {opacity:0; transform:translateY(30px);}
+  to {opacity:1; transform:translateY(0);}
 }
 
-body{
-    font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;
-    background:linear-gradient(-45deg,#ffffff,#e0f2fe,#f0f9ff,#ffffff);
-    background-size:300% 300%;
-    animation:wave 12s ease infinite;
-    color:#0f172a;
+section {
+  animation: fadeUp 1s ease both;
 }
 
-@keyframes wave{
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+details[open] > div {
+  animation: fadeUp 0.6s ease;
 }
 
-/* NAV */
-nav{
-    position:fixed;
-    width:100%;
-    top:0;
-    backdrop-filter:blur(10px);
-    background:rgba(255,255,255,0.7);
-    border-bottom:1px solid rgba(0,0,0,0.05);
-    z-index:1000;
+details > summary div {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.nav-container{
-    max-width:1000px;
-    margin:auto;
-    padding:15px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-nav a{
-    text-decoration:none;
-    color:#0f172a;
-    margin-left:15px;
-    font-size:14px;
-}
-
-/* CONTAINER */
-.container{
-    max-width:1000px;
-    margin:auto;
-    padding:120px 20px 60px;
-}
-
-/* SECTION */
-section{
-    margin-bottom:50px;
-    padding:25px;
-    border-radius:16px;
-    background:rgba(255,255,255,0.8);
-    backdrop-filter:blur(12px);
-    box-shadow:0 10px 30px rgba(0,0,0,0.05);
-}
-
-h1{
-    font-size:32px;
-    margin-bottom:8px;
-}
-
-h2{
-    font-size:18px;
-    margin-bottom:15px;
-    border-left:3px solid #3b82f6;
-    padding-left:8px;
-}
-
-p{
-    margin-bottom:12px;
-    line-height:1.6;
-    font-size:14px;
-}
-
-/* CATEGORY */
-.category{
-    margin-top:20px;
-    padding:20px;
-    border-radius:14px;
-    background:#f8fbff;
-    border:1px solid #e0f2fe;
-}
-
-.spotlight{
-    margin-top:15px;
-    padding:15px;
-    border-radius:12px;
-    background:white;
-    border:1px solid #e0f2fe;
-    display:flex;
-    gap:15px;
-    align-items:flex-start;
-}
-
-/* ICON BOX */
-.icon-box{
-    width:50px;
-    height:50px;
-    border-radius:12px;
-    background:linear-gradient(135deg,#3b82f6,#60a5fa);
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:bold;
-    flex-shrink:0;
-    font-size:14px;
-}
-
-/* MOBILE FIX */
-@media(max-width:600px){
-    .spotlight{
-        flex-direction:column;
-        align-items:flex-start;
-    }
-
-    nav a{
-        margin-left:10px;
-        font-size:13px;
-    }
-
-    h1{
-        font-size:26px;
-    }
-}
-
-footer{
-    text-align:center;
-    padding:30px;
-    font-size:13px;
-    color:#475569;
+details > summary:hover div {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
 }
 </style>
+
 </head>
 
-<body>
+<body style="margin:0;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',sans-serif;background:linear-gradient(#ffffff,#e0f2fe);color:#0f172a;">
 
-<nav>
-    <div class="nav-container">
-        <strong>adelio.a_</strong>
-        <div>
-            <a href="#about">Tentang</a>
-            <a href="#projects">Karya</a>
-            <a href="#contact">Kontak</a>
-        </div>
-    </div>
+<nav style="position:fixed;width:100%;top:0;background:rgba(255,255,255,0.95);padding:15px 20px;display:flex;justify-content:space-between;z-index:1000;">
+<strong>adelio.a_</strong>
+<div>
+<a href="#about" style="margin-left:15px;text-decoration:none;color:#0f172a;">Tentang</a>
+<a href="#projects" style="margin-left:15px;text-decoration:none;color:#0f172a;">Karya</a>
+<a href="#contact" style="margin-left:15px;text-decoration:none;color:#0f172a;">Kontak</a>
+</div>
 </nav>
 
-<div class="container">
+<div style="padding:110px 20px 60px;max-width:900px;margin:auto;">
 
-<section id="about">
-    <h1>M. Adelio Altisa M.</h1>
-    <p>Siswa SMA • Developer • OS Enthusiast</p>
-    <br>
-    <h2>Tentang Saya</h2>
-    <p>
-        Singkat saja, nama lengkap saya tertera diatas tuu dan saya biasa dipanggil Adelio di lingkungan saya, yap itu panggilan formal universal (klo panggilan khusus sebaiknya jgn dicari tau, aneh2 semua jir??)
-      <p> Saat ini saya sedang menempuh pendidikan di salah satu SMA yang ada di Kota Kudus, yakni SMA Negeri 1 Kudus sebagai siswa kelas 10. 
-        <p> Untuk bakat dan minat lebih mengarah kepada bidang IT (Information Technology) and yeah, halaman yg anda lihat saat ini adalah hasil kegabutan saya saat libur ramadhan. btw info ps let
-    </p>
+<section id="about" style="margin-bottom:60px;">
+<h1 style="margin-bottom:8px;">M. Adelio Altisa M.</h1>
+<p>Siswa SMA • Developer • OS Enthusiast</p>
+<br>
+<h2 style="border-left:4px solid #3b82f6;padding-left:10px;">Tentang Saya</h2>
+<p>Singkat saja, nama lengkap saya tertera diatas tuu dan saya biasa dipanggil Adelio di lingkungan saya, yap itu panggilan formal universal (klo panggilan khusus sebaiknya jgn dicari tau, aneh2 semua jir??)</p>
+<p>Saat ini saya sedang menempuh pendidikan di salah satu SMA yang ada di Kota Kudus, yakni SMA Negeri 1 Kudus sebagai siswa kelas 10.</p>
+<p>Untuk bakat dan minat lebih mengarah kepada bidang IT (Information Technology) and yeah, halaman yg anda lihat saat ini adalah hasil kegabutan saya saat libur ramadhan. btw info ps let</p>
 </section>
 
 <section id="projects">
-    <h2>Penerapan</h2>
+<h2 style="border-left:4px solid #3b82f6;padding-left:10px;margin-bottom:30px;">Kreasi Saya</h2>
 
-    <div class="category">
-        <h3>App Developer</h3>
-        <p>
-            Saya memiliki hobi coding dan membuat program sendiri, untuk aplikasi yang saya buat dibawah sini umumnya dibuat menggunakan Godot Engine 4.
-        </p>
+<details style="margin-bottom:30px;">
+<summary style="list-style:none;cursor:pointer;">
+<div style="background:white;border-radius:20px;padding:25px;box-shadow:0 10px 40px rgba(0,0,0,0.08);">
+<h3>MiniCode Studio</h3>
+<div style="margin:15px 0;">
+<img src="gambar1.png" style="width:100%;border-radius:14px;">
+</div>
+<p>Saya memiliki hobi coding dan membuat program sendiri, untuk aplikasi yang saya buat dibawah sini umumnya dibuat menggunakan Godot Engine 4.</p>
+</div>
+</summary>
 
-        <div class="spotlight">
-            <div class="icon-box">MC</div>
-            <div>
-                <strong>MiniCode Studio</strong>
-                <p>
-                    Aplikasi yang dapat memungkinkan penggunanya untuk melakukan pengetikan atau coding semacam VSCode Studio tapi dengan size yang lebih ringan dan memiliki 2 mode utama, yakni Code Editor untuk aktivitas pengetikan kode kompleks seperti coding dan programming serta Text Editor untuk mengetik biasa seperti membuat catatan. 
-                    <p> Aplikasi ini mendukung semua format file yang berbentuk teks (yap, literally semua jenis file yg mengandung teks!) seperti .txt .py dll.
-                </p>
-            </div>
-        </div>
-    </div>
+<div style="background:#f8fbff;padding:20px;border-radius:0 0 20px 20px;">
+<p>Aplikasi yang dapat memungkinkan penggunanya untuk melakukan pengetikan atau coding semacam VSCode Studio tapi dengan size yang lebih ringan dan memiliki 2 mode utama, yakni Code Editor untuk aktivitas pengetikan kode kompleks seperti coding dan programming serta Text Editor untuk mengetik biasa seperti membuat catatan.</p>
+<p>Aplikasi ini mendukung semua format file yang berbentuk teks (yap, literally semua jenis file yg mengandung teks!) seperti .txt .py dll.</p>
+<a href="#" style="text-decoration:none;color:#2563eb;font-weight:600;">Download</a>
+</div>
+</details>
 
-    <div class="category">
-        <h3>Operating System That I Make</h3>
-        <p>
-          Selain itu, saya juga membuat sistem operasi sendiri yang memiliki konsep <b>Hybrid</b> yakni dalam sistem ioperasi ket .deb
-        </p>
+<details style="margin-bottom:30px;">
+<summary style="list-style:none;cursor:pointer;">
+<div style="background:white;border-radius:20px;padding:25px;box-shadow:0 10px 40px rgba(0,0,0,0.08);">
+<h3>Minhy OS</h3>
+<div style="margin:15px 0;">
+<img src="gambar2.png" style="width:100%;border-radius:14px;">
+</div>
+<p>Selain itu, saya juga membuat sistem operasi sendiri yang memiliki konsep <b>Hybrid</b> yakni dalam sistem ioperasi ket .deb</p>
+</div>
+</summary>
 
-        <div class="spotlight">
-            <div class="icon-box">OS</div>
-            <div>
-                <strong>Minhy OS</strong>
-                <p>
-                    Sistem operasi berbasis Debian Linux yang saya kembangkan dengan fokus
-                    pada performa ringan, dukungan hybrid, dan kemudahan kustomisasi.
-                 <h3>What makes it special?
- 
-                </h3>
-      <br>
+<div style="background:#f8fbff;padding:20px;border-radius:0 0 20px 20px;">
+<p>Sistem operasi berbasis Debian Linux yang saya kembangkan dengan fokus pada performa ringan, dukungan hybrid, dan kemudahan kustomisasi.</p>
+<p><b>Hybrid Operating System</b></p>
+<p>OS ini memiliki dukungan untuk menjalankan aplikasi dari dua platform yang berbeda secara langsung! U bisa jalanin app Windows berformat .exe .msi serta aplikasi Linux berformat .deb dan lainnya.</p>
+<p>oiya, ada beebrapa settingan tambahan seperti Hybrid Power Plan, Controlled Hybrid CPU Management dan beberapa settingan lain yang tersedia di pengaturan untuk efektifitas penggunaan.</p>
+<a href="#" style="text-decoration:none;color:#2563eb;font-weight:600;">Download</a>
+</div>
+</details>
 
-<table width="100%" cellpadding="10" cellspacing="10">
-  <tr>
-    <td width="50%" valign="top" style="background:#ffffff;border:1px solid #e0f2fe;border-radius:12px;">
-      <b>💠 Hybrid Operating System</b>
-      <p>
-        OS ini memiliki dukungan untuk menjalankan aplikasi dari dua platform yang berbeda secara langsung! U bisa jalanin app Windows berformat .exe .msi serta aplikasi Linux berformat .deb dan lainnya.
-      </p>
-    </td>
+<details>
+<summary style="list-style:none;cursor:pointer;">
+<div style="background:white;border-radius:20px;padding:25px;box-shadow:0 10px 40px rgba(0,0,0,0.08);">
+<h3>YouTube Channel</h3>
+<div style="margin:15px 0;">
+<img src="gambar3.jpg" style="width:100%;border-radius:14px;">
+</div>
+<p>Membuat konten seputar teknologi, eksperimen sistem, development, dan eksplorasi dunia IT.</p>
+</div>
+</summary>
 
-    <td width="50%" valign="top" style="background:#ffffff;border:1px solid #e0f2fe;border-radius:12px;">
-      <b>⚡ Additonal Features</b>
-      <p>
-        Ada beberapa settingan tambahan seperti Hybrid Power Plan, Controlled CPU for Hybrid Systems, Dynamic Memory Allocator untuk efektivitas penggunaan.
-      </p>
-    </td>
-  </tr>
-
-  <tr>
-    <td width="50%" valign="top" style="background:#ffffff;border:1px solid #e0f2fe;border-radius:12px;">
-      <b>Ⓜ️ Mini UI</b>
-      <p>
-        Mini UI adalah desktop environment berbasis XFCE 4 yang dirancang untuk menghadirkan performa ringan dengan tampilan modern dan minimalis. Memberikan pengalaman komputasi yang stabil serta responsif.
-      </p>
-    </td>
-
-    <td width="50%" valign="top" style="background:#ffffff;border:1px solid #e0f2fe;border-radius:12px;">
-      <b>⚙ Additional Settings</b>
-      <p>
-        dan beberapa settingan lain yang tersedia di pengaturan untuk efektifitas penggunaan.
-      </p>
-    </td>
-  </tr>
-</table>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="category">
-        <h3>YouTube Channel</h3>
-        <p>
-            Membuat konten seputar teknologi, eksperimen sistem,
-            development, dan eksplorasi dunia IT.
-        </p>
-
-        <div class="spotlight">
-            <div class="icon-box">YT</div>
-            <div>
-                <strong>Channel Teknologi</strong>
-                <p>
-                    Berisi eksperimen OS, tutorial development,
-                    serta dokumentasi proyek yang sedang saya kerjakan.
-                </p>
-            </div>
-        </div>
-    </div>
+<div style="background:#f8fbff;padding:20px;border-radius:0 0 20px 20px;">
+<p>Berisi eksperimen OS, tutorial development, serta dokumentasi proyek yang sedang saya kerjakan.</p>
+<a href="#" style="text-decoration:none;color:#2563eb;font-weight:600;">Kunjungi Channel</a>
+</div>
+</details>
 
 </section>
 
-<section id="contact">
-    <h2>Kontak</h2>
-    <p>Email: emailkamu@email.com</p>
-    <p>GitHub: github.com/username</p>
-    <p>YouTube: youtube.com/namachannel</p>
+<section id="contact" style="margin-top:60px;">
+<h2 style="border-left:4px solid #3b82f6;padding-left:10px;">Kontak</h2>
+<p>Email: emailkamu@email.com</p>
+<p>GitHub: github.com/username</p>
+<p>YouTube: youtube.com/namachannel</p>
 </section>
 
-<footer>
-    © 2026 Adelio Milanisti — Clean Blue Portfolio
+<footer style="text-align:center;margin-top:50px;padding:30px 0;color:#475569;font-size:14px;">
+© 2026 Adelio Milanisti — Clean Blue Portfolio
 </footer>
 
 </div>
